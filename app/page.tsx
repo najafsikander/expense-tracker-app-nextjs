@@ -1,5 +1,7 @@
 import Guest from "@/components/Guest";
 import { checkUser } from "@/lib/checkUser";
+import AddTransaction from "@/components/AddTransaction";
+
 const HomePage = async () => {
 
   const user = await checkUser();
@@ -8,6 +10,7 @@ const HomePage = async () => {
 
   return ( <main>
     <h1>Welcome, {user.name}</h1>
+    <AddTransaction/>
   </main> );
 }
  
